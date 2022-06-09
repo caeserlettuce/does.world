@@ -78,7 +78,7 @@ function on_resize() {
         if (header_logo_big == true) {
             //header_badge.src = "../assets/dw_logo.png";
             document.getElementById("sm-arrow").style.right = "10px";
-            document.getElementById("header-menu-style").innerHTML = ".headermenu { width: 100vw;} .shrink-logo {width: 0px; transform: translateX(-1px)}";
+            document.getElementById("header-menu-style").innerHTML = ".headermenu { width: 100vw;} .shrink-logo {width: 0px; transform: translateX(-1px)} .footer {padding-bottom: 15px;} .footerdiv {margin-top: 1rem;}";
             logo_oes.style.width = "0px";
             logo_orld.style.width = "0px";
             header_logo_big = false;
@@ -114,3 +114,4 @@ function on_resize() {
         first_load = false;
     }
 }
+
