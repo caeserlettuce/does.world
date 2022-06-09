@@ -1,0 +1,175 @@
+@font-face {
+    font-family: MINECRAFTER;
+    src: url(assets/MinecrafterReg.ttf);
+}
+
+@font-face {
+    font-family: LATO;
+    src: url(assets/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: LATOBOLD;
+    src: url(assets/Lato-Bold.ttf);
+}
+
+.disable {
+    /* nft websites can't figure this out when it took me a quick google search */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+}
+::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    /*background: #789feb;*/
+    display: none;
+}
+
+
+body {
+    font-family: LATOBOLD, "Castledown", "Gotham SSm A", "Gotham SSm B", "Noto Sans", sans-serif; /* i stole this font from a school survey website and it works >:) */
+    background-color: black;
+    overflow: overlay;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+
+
+.header {
+    width: 100vw;
+    height: 2.5rem;
+    background-color: #ffffff50;
+    color: #ffffff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5000;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.header-logo {
+    height: 2rem;
+    margin-top: 0.25rem;
+    object-fit: cover;
+}
+
+.shrink-logo {
+    transition-duration: 1s;
+}
+
+.logofun {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0px;
+}
+
+.pixely {
+    image-rendering: pixelated;
+}
+
+.pointy {
+    cursor: pointer;
+}
+
+.normal {
+    cursor: default;
+}
+
+main {
+    color: white;
+    z-index: -5000;
+    top: 0px;
+    left: 0px;
+}
+
+.header-menu-burger {
+    position: absolute;
+    left: 0.25em;
+    height: 2em;
+    top: 0.25em;
+    z-index: 5500;
+    transition-duration: 250ms;
+}
+
+.headermenu {
+    position: fixed;
+    text-align: center;
+    top: 2.5em;
+    left: -100vw;
+    width: 30rem;
+    height: 100vh;
+    background-color: #ffffff30;
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    color: white;
+    transition-duration: 1s;
+}
+
+.menutext {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 1.5rem;
+    margin-bottom: 7px;
+    color: white;
+}
+
+.menu-title {
+    font-size: 2rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 250ms;
+}
+
+a:hover {
+    color: #e4e4e4;
+}
+
+.sm-arrow {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    right: 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 5px;
+    transform: rotateY(180deg);
+    transition-duration: 1s;
+}
+
+#arowtm {
+    transition-duration: 250ms;
+}
+
+.sm-arrow:hover #arowtm {
+    fill: #e4e4e4;
+}
+
+.header-menu-burger:hover {
+    fill: #e4e4e4;
+}
+
+/*
+crop??
+    image-fit
+
+*/
