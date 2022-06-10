@@ -147,8 +147,18 @@ main {
 
 .menu-title {
     font-size: 2rem;
+    margin: 0px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
+.menusection {
+    font-size: 1.75rem;
+    text-decoration: underline;
+    margin: 0px;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
 
 a {
     text-decoration: none;
@@ -303,4 +313,44 @@ crop??
     transition-property: margin;
     transition-duration: 1s;
     margin-left: 0.35rem;
+}
+
+.backy {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -100;
+}
+
+
+.backy-blur {
+    position: fixed;
+    width: 150vw;
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -50;
+}
+
+.scl {
+    height: 4.25rem;
+    margin-left: 0.35rem;
+    transition-duration: 400ms;
+    fill: white;   
+}
+
+.scl:hover {
+    fill: #e4e4e4;
+}
+
+.backy-text {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: -100;
+    color: white;
+    margin: 0.5rem;
+    margin-bottom: 0.75rem;
 }

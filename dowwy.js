@@ -3,6 +3,10 @@
 
     https://simpleicons.org/
 
+
+
+
+
   blue
   #1068a9
 
@@ -66,7 +70,3 @@ function bloop() {
 
 
 init_sitemenu();
-
-window.onresize = on_resize
-
-on_resize();

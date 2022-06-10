@@ -12,6 +12,15 @@ var header_logo_big = true;
 var big_logo_size = 0;
 var sitem = document.getElementById("headermenu");
 var first_load = true;
+var scroll_rn = 0;
+var backytm = document.getElementById("backy");
+var scroll_factor = 50;
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 
 // logo stuff
@@ -29,18 +38,23 @@ function init_sitemenu() {
 
     for (i in sitemenu_links) {
 
-        var item = sitemenu_links[i];
-        var url = 'https://does.world';
-        var txt = "[someone scewed up on this db entry lmao]";
-        if (item.url) {
-            url = `${item.url}`;
-        }
-        if (item.text) {
-            txt = `${item.text}`;
-        }
+        final_html += `<p class="menusection">${i}</p>`;
 
-        final_html += `<p class="menutext"><a href="${url}">${txt}</a></p>`;
+
+        for (e in sitemenu_links[i]) {
+
+            var item = sitemenu_links[i][e];
+            var url = 'https://does.world';
+            var txt = "[someone scewed up on this db entry lmao]";
+            if (item.url) {
+                url = `${item.url}`;
+            }
+            if (item.text) {
+                txt = `${item.text}`;
+            }
     
+            final_html += `<p class="menutext"><a href="${url}">${txt}</a></p>`;
+        }
     }
 
     sitemenu.innerHTML = final_html;
@@ -115,3 +129,43 @@ function on_resize() {
     }
 }
 
+function on_scroll() {
+    scroll_rn = window.scrollY;
+
+    var porcent = 100 + (scroll_rn / scroll_factor);
+
+    var tm = (scroll_rn / scroll_factor);
+
+    //backytm.style.transform = `scale(${porcent}%, ${porcent)}%)`;
+
+    console.log(tm);
+    
+    if (tm < 6) {
+        backytm.style.filter = `blur(${tm}px)`;
+    } else {
+        backytm.style.filter = `blur(6px)`;
+    }
+
+   
+
+
+}
+
+
+var img_int = getRandomInt(1, 17);
+
+console.log(img_int);
+
+backytm.style.backgroundImage = `url("../img/${img_int}.png")`;
+document.getElementById("backy2").style.backgroundImage = `url("../img/${img_int}.png")`;
+document.getElementById("backy-text").innerHTML = `image: ${background_info[img_int]} on DoeSMP`;
+
+
+window.onresize = on_resize
+
+window.onscroll = on_scroll
+
+on_resize();
+
+
+on_scroll();
