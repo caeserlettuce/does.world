@@ -252,6 +252,7 @@ crop??
     align-items: center;
     justify-content: center;
     animation-duration: 0.4s;
+    font-size: 0px;
 }
 
 
